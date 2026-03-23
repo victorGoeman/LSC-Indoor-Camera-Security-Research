@@ -32,9 +32,9 @@ When a user updates the Time Zone (TZ), the input string is processed by the `dg
 
 ### Exploitability & Binary Protections
 Using `checksec` on the `dgiot` binary reveals a lack of modern exploit mitigations:
-* **NX (No-Execute):** Disabled (The stack is executable).
-* **Stack Canary:** Disabled (No protection against return address overwriting).
-* **ASLR:** Enabled (Address Space Layout Randomization).
+* **NX (No-Execute):** Disabled.
+* **Stack Canary:** Disabled.
+* **ASLR:** Enabled.
 * **RELRO:** Partial RELRO.
 
 Because the stack is executable and canaries are absent, the buffer overflow is directly exploitable for code injection, despite ASLR being enabled (via ROP or shellcode injection if the stack address can be leaked/predicted).
@@ -65,7 +65,6 @@ A secondary, similar buffer overflow was identified in the `protocol` parameter 
 This vulnerability poses a severe risk to user privacy and device security:
 1. **Full System Takeover:** Attackers gain `root` access via RCE.
 2. **Privacy Violation:** Unauthenticated access to the live video and audio feed.
-3. **Botnet Recruitment:** Compromised cameras can be used in distributed denial-of-service (DDoS) attacks.
 
 ---
 
