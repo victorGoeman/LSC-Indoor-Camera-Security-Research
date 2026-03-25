@@ -12,7 +12,7 @@
 | **CWE ID** | CWE-121: Stack-based Buffer Overflow, CWE-120: Buffer Copy without Checking Size |
 | **CVSS 3.1 Vector** | `CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H` |
 | **Base Score** | 7.2 (High) |
-| **Impact** | Code Execution: True, Denial of Service: True |
+| **Impact** | Code Execution, Denial of Service |
 
 ---
 
