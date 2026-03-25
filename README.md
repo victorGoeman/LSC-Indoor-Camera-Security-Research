@@ -27,7 +27,7 @@ The `dgiot` binary, which manages the camera's core services, was found to conta
 | CVE ID | Vulnerability Type | Component | Impact |
 | :--- | :--- | :--- | :--- |
 | **[CVE-2024-51347](./CVE-2024-51347.md)** | Stack Buffer Overflow | TimeZone Parameter | Remote Code Execution |
-| **[CVE-2024-XXXXX](./CVE-2025-69986.md)** | Stack Buffer Overflow | Protocol Parameter | Remote Code Execution |
+| **[CVE-2025-69986](./CVE-2025-69986.md)** | Stack Buffer Overflow | Protocol Parameter | Remote Code Execution |
 
 ---
 
