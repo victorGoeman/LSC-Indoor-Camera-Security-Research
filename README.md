@@ -30,4 +30,8 @@ The `dgiot` binary, which manages the camera's core services, was found to conta
 | **[CVE-2025-69986](./CVE-2025-69986.md)** | Stack Buffer Overflow | Protocol Parameter | Remote Code Execution |
 
 ---
+## Research Context
+This vulnerability was discovered and documented as part of an academic security audit performed at **DistriNet (KU Leuven)**. 
 
+* **Research Group:** [DistriNet](https://iiw.kuleuven.be/onderzoek/distrinet)
+* **Institution:** KU Leuven, Faculty of Engineering Technology, Technology Campus Ghent.
