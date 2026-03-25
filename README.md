@@ -1,5 +1,21 @@
 # CVE-2024-51347: Unauthenticated Remote Code Execution in LSC Indoor Camera via ONVIF TimeZone
 
+## Vulnerability Metadata
+
+| Field | Details |
+| :--- | :--- |
+| **Vendor** | LSC |
+| **Product** | Smart Indoor IP Camera |
+| **Affected Version** | < V7.6.32 |
+| **Component** | `dgiot` binary (ONVIF Service) |
+| **Attack Type** | Network / LAN |
+| **CWE ID** | CWE-121: Stack-based Buffer Overflow, CWE-120: Buffer Copy without Checking Size |
+| **CVSS 3.1 Vector** | `CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H` |
+| **Base Score** | 7.2 (High) |
+| **Impact** | Code Execution: True, Denial of Service: True |
+
+--
+
 ## Executive Summary
 A critical stack-based buffer overflow vulnerability was identified in the `dgiot` binary of the LSC Indoor Camera. The flaw exists in the handling of the Time Zone (`TZ`) parameter within the ONVIF configuration interface. By sending an oversized string to the Time Settings endpoint, an attacker can overwrite the Return Instruction Pointer (RIP) to achieve arbitrary command execution. Combined with hardcoded ONVIF credentials, this allows for full remote system compromise.
 
